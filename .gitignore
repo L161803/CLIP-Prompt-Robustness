@@ -1,0 +1,30 @@
+# Python 関係
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+build/
+dist/
+
+# Jupyter Notebook 関係
+.ipynb_checkpoints
+
+# LaTeX 関係 (VSCodeでビルドすると大量に出ます)
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.pdf (完成品を上げたくない場合のみ)
+
+# OS/エディタ 関係
+.DS_Store
+Thumbs.db
+.vscode/
+
+# データ・結果 (巨大な画像や大量のCSVを上げたくない場合)
+data/
+results/

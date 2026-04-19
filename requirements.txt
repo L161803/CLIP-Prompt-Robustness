@@ -1,0 +1,13 @@
+# requirements.txt
+torch
+torchvision
+ftfy
+regex
+tqdm
+numpy
+matplotlib
+pandas
+seaborn
+Pillow
+# CLIP本体
+git+https://github.com/openai/CLIP.git
