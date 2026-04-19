@@ -58,7 +58,7 @@ python src/run_experiment.py
 
 ## 著者
 * Kay (Tokai Univ.)
-* GitHub: []
+* GitHub: [https://github.com/L161803]
 
 ## ライセンス
 MIT License
