@@ -7,15 +7,15 @@ from clip_utils import load_clip_model, get_similarity
 
 
 def main():
-    # 1. モデルのロード
+    # モデルのロード
     print(f"Loading {MODEL_NAME} on {DEVICE}...")
     model, preprocess = load_clip_model(MODEL_NAME, DEVICE)
 
-    # 2. 類似度（確率分布）の計算
+    # 類似度（確率分布）の計算
     print(f"Running experiment on image: {TARGET_IMAGE}")
     probs = get_similarity(model, preprocess, TARGET_IMAGE, LABEL_SET, DEVICE)
 
-    # 3. 結果をDataFrameにまとめて整理
+    # 結果をDataFrameにまとめて整理
     df = pd.DataFrame({
         "label": LABEL_SET,
         "probability": probs
@@ -27,12 +27,12 @@ def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     image_name = os.path.basename(TARGET_IMAGE).split('.')[0]
 
-    #  CSVとして保存
+    # CSVとして保存
     csv_path = os.path.join(OUTPUT_DIR, f"results_{image_name}.csv")
     df.to_csv(csv_path, index=False)
     print(f"Saved results to: {csv_path}")
 
-    #  可視化（Seabornによる棒グラフ）
+    # 可視化（Seabornによる棒グラフ）
     plt.figure(figsize=(10, 6))
     sns.set_theme(style="whitegrid")
     import matplotlib as mpl
